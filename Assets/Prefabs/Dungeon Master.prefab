@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7344060981903321309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7344060981903321308}
+  - component: {fileID: 7344060981903321307}
+  m_Layer: 0
+  m_Name: Dungeon Master
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7344060981903321308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7344060981903321309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.754244, y: 34.536575, z: 88.075356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7344060981903321307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7344060981903321309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da52d1925db407843a469e449349ed7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathCount: 250
+  mapWidth: 100
+  mapHeight: 100
+  straightPercent: 93
+  turnPercent: 99
+  secondsBetweenBuilding: 0
+  roomTries: 20
+  roomAttempts:
+  - roomRetries: 5
+    roomMin: {x: 5, y: 5}
+    roomMax: {x: 8, y: 8}
+    settings: -1
+  - roomRetries: 5
+    roomMin: {x: 5, y: 5}
+    roomMax: {x: 8, y: 8}
+    settings: -1
+  - roomRetries: 5
+    roomMin: {x: 5, y: 5}
+    roomMax: {x: 8, y: 8}
+    settings: -1
+  - roomRetries: 5
+    roomMin: {x: 5, y: 5}
+    roomMax: {x: 8, y: 8}
+    settings: -1
+  - roomRetries: 5
+    roomMin: {x: 15, y: 15}
+    roomMax: {x: 15, y: 15}
+    settings: 2
+  rooms: []
+  expandRooms: 1
+  joinRooms: 1
+  roomFloorPrefab: {fileID: 9028106412555966114, guid: d7351fdb72b50ab42bceadb1a62ba826,
+    type: 3}
+  hallFloorPrefab: {fileID: 9028106412555966114, guid: b8d8f395594bb264da5e64bc84bf44ca,
+    type: 3}
+  wallPrefab: {fileID: 3378645650505369620, guid: 0b32b8eb8aebd1b45975bab763411b4b,
+    type: 3}
+  doorPrefab: {fileID: 1688775572541881528, guid: 0586e6a70352da64aa64738b086b01c8,
+    type: 3}
+  state: 0
+  defaultMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
