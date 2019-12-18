@@ -42,7 +42,6 @@ public class HostilePathFinder : PathFinder
 
 				if (Vector3.Distance(transform.position, enemy.position) <= killDistance)
 				{
-					Debug.Log(Vector3.Distance(transform.position, enemy.position));
 					UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 				}
 				else

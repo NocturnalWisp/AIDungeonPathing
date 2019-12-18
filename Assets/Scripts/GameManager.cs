@@ -15,6 +15,17 @@ public class GameManager : MonoBehaviour
 		if (Instance == null)
 		{
 			Instance = this;
+
+#if GVR
+			nonVRSet.SetActive(false);
+			vrSet.SetActive(true);
+			myLookAt = vrCamLookAt;
+#else
+			nonVRSet.SetActive(true);
+			vrSet.SetActive(false);
+			myLookAt = camLookAt;
+#endif
+			GetComponentInChildren<Canvas>().worldCamera = myLookAt.GetComponent<Camera>();
 		}
 		else
 		{
@@ -30,6 +41,10 @@ public class GameManager : MonoBehaviour
 
 	[Space]
 	public CameraLookAt camLookAt;
+	public CameraLookAt vrCamLookAt;
+	private CameraLookAt myLookAt;
+	public GameObject nonVRSet;
+	public GameObject vrSet;
 
 	[Space]
 	public Canvas loadingCanvas;
@@ -40,7 +55,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 		CreateDungeon();
-    }
+	}
 
 	void CreateDungeon()
 	{
@@ -76,8 +91,8 @@ public class GameManager : MonoBehaviour
 			Vector2Int pos = room.tiles[Random.Range(0, room.tiles.Length)];
 
 			GameObject newplayer = Instantiate(playerPrefab, new Vector3(pos.x, 1, pos.y), Quaternion.identity);
-			newplayer.GetComponent<PathFinder>().cam = camLookAt.GetComponent<Camera>();
-			camLookAt.target = newplayer.transform;
+			newplayer.GetComponent<PathFinder>().cam = myLookAt.GetComponent<Camera>();
+			myLookAt.target = newplayer.transform;
 
 			//Get enemy available
 			availableRooms = dungeonMaster.rooms.Where(
@@ -90,7 +105,7 @@ public class GameManager : MonoBehaviour
 				pos = room.tiles[Random.Range(0, room.tiles.Length)];
 
 				newplayer = Instantiate(enemyPrefab, new Vector3(pos.x, 1, pos.y), Quaternion.identity);
-				newplayer.GetComponent<PathFinder>().cam = Camera.main;
+				newplayer.GetComponent<PathFinder>().cam = myLookAt.GetComponent<Camera>();
 
 				availableRooms.RemoveAt(i);
 			}
