@@ -994,6 +994,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7344060981903321307, guid: 1c860af257874874aac6cb567a09cc08,
+        type: 3}
+      propertyPath: hallFloorPrefab
+      value: 
+      objectReference: {fileID: 2689453317312695167, guid: 8761569361fc32940847c4c5da50da29,
+        type: 3}
+    - target: {fileID: 7344060981903321307, guid: 1c860af257874874aac6cb567a09cc08,
+        type: 3}
+      propertyPath: roomFloorPrefab
+      value: 
+      objectReference: {fileID: 2689453317312695167, guid: 8761569361fc32940847c4c5da50da29,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c860af257874874aac6cb567a09cc08, type: 3}
 --- !u!1001 &1099991715
