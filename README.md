@@ -1,7 +1,6 @@
 <h1> AI Dungeon PathFinding </h1>
 <p class="mb-5">
-  What started as a small school project turned into a large Artificial Intelligence Simulation.
-  The simulation offers 3 unique types of AI;<br/>Procedural dungeon generation, path node 
+  The simulation offers 3 unique types of AI; Procedural dungeon generation, path node 
   generation, and character state machines. 
   <br/><br/>
   <span style="color:rgb(255, 85, 85)"><b>
@@ -32,7 +31,9 @@
   enemy. The enemies chase when encountering a player. When the characters are not fleeing or
   following, they chose a random pathnode and attempt to travel to it.
   <br/><br/>
+  <b>
   You can find a build of the project in the releases section.
   If you have an Android device with a VR headset or google cardboard, there is an APK build 
   that supports it also under the releases page.
+  </b>
 </p>
